@@ -25,7 +25,7 @@ const CreateAccount = () => {
   const submitHandler = async (data: UserSchemaType) => {
     console.log(data);
     const formData = new FormData();
-    formData.append("username", data.username);
+    formData.append("employeeName", data.username);
     formData.append("email", data.email);
     formData.append("password", data.password);
     if (data.image) {
