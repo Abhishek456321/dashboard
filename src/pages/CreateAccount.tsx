@@ -4,9 +4,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { MdOutlineFileUpload } from "react-icons/md";
 import { RxFramerLogo } from "react-icons/rx";
 import { FaArrowRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const CreateAccount = () => {
   const {
@@ -20,7 +21,7 @@ const CreateAccount = () => {
   });
   const fileRef = useRef<HTMLInputElement>(null);
   const [preview, setPreview] = useState<string | null>(null);
-
+  const navigate = useNavigate();
   const submitHandler = async (data: UserSchemaType) => {
     console.log(data);
     const formData = new FormData();
@@ -37,6 +38,8 @@ const CreateAccount = () => {
         reset();
         fileRef.current = null;
         setPreview(null);
+        navigate("/login");
+        toast.success(res.data.message);
       }
     } catch (error) {
       console.log(error);
