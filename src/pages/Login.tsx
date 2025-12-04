@@ -4,8 +4,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 import axios from "axios";
 import { loginSchema, type loginSchemaType } from "../schema/loginSchema";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -29,6 +31,11 @@ const Login = () => {
         reset();
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("role", res.data.role);
+        if (res.data.token && res.data.role === "admin") {
+          navigate("/dashboard");
+        } else {
+          navigate("/home");
+        }
       }
     } catch (error) {
       console.log(error);
