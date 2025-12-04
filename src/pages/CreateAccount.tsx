@@ -37,6 +37,9 @@ const CreateAccount = () => {
         console.log(res.data);
         reset();
         fileRef.current = null;
+        if (preview) {
+          URL.revokeObjectURL(preview);
+        }
         setPreview(null);
         navigate("/login");
         toast.success(res.data.message);
@@ -109,7 +112,7 @@ const CreateAccount = () => {
             const file = e.target.files?.[0];
             if (file) {
               setValue("image", file);
-              console.log(URL.createObjectURL(file));
+
               setPreview(URL.createObjectURL(file));
             }
           }}
