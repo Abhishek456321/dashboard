@@ -29,7 +29,7 @@ const CreateAccount = () => {
     formData.append("email", data.email);
     formData.append("password", data.password);
     if (data.image) {
-      formData.append("image", data.image);
+      formData.append("employeePhoto", data.image);
     }
     try {
       const res = await axios.post("http://localhost:4000/api/user", formData);
@@ -143,6 +143,7 @@ const CreateAccount = () => {
           </p>
         )}
         <input
+          type="password"
           {...register("password")}
           placeholder="Password"
           className="h-[10%] w-1/2 px-5 py-1 border-2 border-purple-700/30 font-bold  rounded-4xl"

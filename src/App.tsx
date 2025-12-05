@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import AdminOnly from "./components/AdminOnly";
 import Home from "./pages/Home";
 import Autheticated from "./components/Autheticated";
+import CompleteRegistration from "./pages/CompleteRegistration";
 
 const App = () => {
   return (
@@ -18,6 +19,14 @@ const App = () => {
           element={
             <Autheticated>
               <Home />
+            </Autheticated>
+          }
+        ></Route>
+        <Route
+          path="/complete-registration"
+          element={
+            <Autheticated>
+              <CompleteRegistration />
             </Autheticated>
           }
         ></Route>

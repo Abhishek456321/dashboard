@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
 import { loginSchema, type loginSchemaType } from "../schema/loginSchema";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -36,6 +37,8 @@ const Login = () => {
         } else {
           navigate("/home");
         }
+      } else {
+        toast.error(res.data.message);
       }
     } catch (error) {
       console.log(error);
@@ -64,6 +67,7 @@ const Login = () => {
           </p>
         )}
         <input
+          type="password"
           {...register("password")}
           placeholder="Password"
           className="h-[10%] w-1/2 px-5 py-1 border-2 border-purple-700/30 font-bold  rounded-4xl"
