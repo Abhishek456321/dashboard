@@ -9,7 +9,7 @@ import Summary from "../components/Summary";
 
 const Dashboard = () => {
   return (
-    <div className="w-screen  pt-[102px]  bg-linear-to-b from-blue-500/15 to-blue-500/5">
+    <div className="w-[86vw]  pt-[102px]  bg-linear-to-b from-blue-500/15 to-blue-500/5">
       <div className="">
         <Header></Header>
         <Greeting></Greeting>

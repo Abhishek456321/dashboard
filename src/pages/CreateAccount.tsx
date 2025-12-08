@@ -52,8 +52,8 @@ const CreateAccount = () => {
     fileRef.current?.click();
   };
   return (
-    <div className="h-screen w-screen p-10 flex justify-center items-center  space-x-2 bg-blue-300/20">
-      <div className=" flex flex-col justify-center items-center bg-linear-to-r from-blue-900/50 to-blue-500/30 w-[50%] h-[85%]  rounded-2xl shadow-2xl shadow-purple-300">
+    <div className="h-screen w-screen p-10 flex justify-center items-center  space-x-8 bg-blue-300/20">
+      <div className=" flex flex-col justify-center items-center bg-linear-to-r from-blue-900/40 to-blue-500/30 w-[50%] h-[85%]  rounded-2xl shadow-2xl shadow-black/50">
         <div className="flex space-x-2 items-center -translate-x-10 -translate-y-17">
           <RxFramerLogo color="purple" className="text-9xl -translate-y-3" />
           <p className="text-4xl font-bold text-blue-900">
@@ -85,13 +85,13 @@ const CreateAccount = () => {
         </Link>
       </div>
       <form
-        className="flex flex-col bg-linear-to-b from-blue-900/50 to-blue-300/30 justify-around items-center space-y-3 h-[85%] w-[50%]  p-5 shadow-2xl shadow-purple-300  rounded-2xl"
+        className="flex flex-col bg-linear-to-b from-blue-900/40 to-blue-300/30 justify-around items-center space-y-3 h-[85%] w-[50%]  p-5 shadow-2xl shadow-black/50  rounded-2xl"
         onSubmit={handleSubmit(submitHandler)}
       >
         <div
           onClick={handlefileClick}
           className={`h-40 w-40  ${
-            !preview && " border border-dashed"
+            !preview && " border border-black  border-dashed"
           } relative flex flex-col justify-center items-center rounded-2xl cursor-pointer`}
         >
           {preview && (

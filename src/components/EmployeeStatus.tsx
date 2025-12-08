@@ -3,7 +3,7 @@ import { LuDot } from "react-icons/lu";
 import { FaArrowRight } from "react-icons/fa6";
 const EmployeeStatus = () => {
   return (
-    <div className="flex flex-col w-[30%] items-center space-y-9 py-7">
+    <div className="flex flex-col w-[20%] items-center space-y-9 py-7">
       <div className="flex  items-center space-x-70 ">
         <p className="font-bold  text-[25px] translate-x-10">
           Employment Status

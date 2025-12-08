@@ -5,7 +5,7 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import profile from "../assets/profile.jpg";
 const Header = () => {
   return (
-    <nav className="fixed bg-blue-100/98 z-50 top-0 w-full flex items-center justify-around py-5 border-b border-black/10">
+    <nav className="fixed bg-blue-100/98 z-50 top-0 w-[86vw] flex items-center justify-around py-5 border-b border-black/10">
       <div className="flex justify-center items-center cursor-pointer">
         <RxFramerLogo color="purple" className="text-6xl " />
         <p className=" text-3xl font-bold">Galenan</p>

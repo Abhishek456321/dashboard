@@ -11,7 +11,7 @@ const EmployeeSatisfactory = () => {
         </div>
       </div>
 
-      <div className="relative w-120 h-120 rounded-full">
+      <div className="relative w-100 h-100 rounded-full">
         <div
           className="w-full h-full rounded-full"
           style={{

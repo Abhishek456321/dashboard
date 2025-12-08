@@ -3,6 +3,7 @@ import "./index.css";
 import App from "./App.tsx";
 import { BrowserRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import "ionicons/icons";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>

@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import { useEffect, useState } from "react";
 import type { Iuser } from "../interface/user";
 
-const Home = () => {
+const EmployeeHome = () => {
   const [user, setUser] = useState<Iuser>();
   const fetchUserDetails = async () => {
     try {
@@ -24,10 +24,8 @@ const Home = () => {
     fetchUserDetails();
   }, []);
   return (
-    <div>
-      <EmployeeHeader user={user as Iuser}></EmployeeHeader>
-    </div>
+    <div>{/* <EmployeeHeader user={user as Iuser}></EmployeeHeader> */}</div>
   );
 };
 
-export default Home;
+export default EmployeeHome;

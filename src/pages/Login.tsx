@@ -33,9 +33,9 @@ const Login = () => {
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("role", res.data.role);
         if (res.data.token && res.data.role === "admin") {
-          navigate("/dashboard");
+          navigate("/admin/home");
         } else {
-          navigate("/home");
+          navigate("/employee/home");
         }
       } else {
         toast.error(res.data.message);
@@ -50,7 +50,7 @@ const Login = () => {
       <form
         className={`flex flex-col bg-linear-to-b ${
           errors.email || errors.password ? "space-y-7" : "space-y-14"
-        }  from-blue-900/50 to-blue-300/30 justify-center items-center h-[75%] w-[50%]  p-5 shadow-2xl shadow-purple-300  rounded-2xl`}
+        }  from-blue-900/40 to-blue-300/30 justify-center items-center h-[75%] w-[50%]  p-5 shadow-2xl shadow-black/50 rounded-2xl`}
         onSubmit={handleSubmit(submitHandler)}
       >
         <p className="text-4xl font-bold text-blue-900 -translate-y-5">
